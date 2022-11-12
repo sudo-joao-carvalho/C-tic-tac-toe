@@ -29,6 +29,8 @@ bool checkWin(char pos[3][3]){
                     }
                 }
 
+                nCondition++;
+
         case 2: //tudo igual por colunas
                 if(pos[0][0] == pos[1][0] && pos[0][0] != ' ' && pos[1][0] != ' '){
                     if(pos[1][0] == pos[2][0] && pos[1][0] != ' ' && pos[2][0] != ' '){
@@ -51,6 +53,8 @@ bool checkWin(char pos[3][3]){
                     }
                 }
 
+                nCondition++;
+
         case 3: //tudo igual diagonais
                 if(pos[0][0] == pos[1][1] && pos[0][0] != ' ' && pos[1][1] != ' '){
                     if(pos[1][1] == pos[2][2] && pos[1][1] != ' ' && pos[2][2] != ' '){
@@ -65,6 +69,8 @@ bool checkWin(char pos[3][3]){
                         return true;
                     }
                 }
+
+                nCondition++;
 
         default: return false;
     }
